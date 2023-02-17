@@ -1,4 +1,4 @@
-require './person'
+require './nameable'
 class NameableBaseDecorator < Nameable
   attr_accessor :nameable_obj
 
