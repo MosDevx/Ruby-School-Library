@@ -1,5 +1,5 @@
 require './person'
-class NameableDecorator < Nameable
+class NameableBaseDecorator < Nameable
   attr_accessor :nameable_obj
 
   def initialize(nameable_obj)

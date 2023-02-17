@@ -1,7 +1,7 @@
 require './nameable_base_decorator'
 require './person'
 
-class TrimmerDecorator < NameableDecorator
+class TrimmerDecorator < NameableBaseDecorator
   def correct_name
     name = @nameable_obj.correct_name
 
