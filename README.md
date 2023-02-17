@@ -18,9 +18,9 @@
 - [📝 License](#license)
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [MyEnumerable] <a name="about-project"></a>
+# 📖 [Ruby School Library] <a name="about-project"></a>
 
-> **MyEnumerable** is a project that is built to decode Morse code.
+> **Ruby School Library** is a project that is built to decode Morse code.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -38,7 +38,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Own Enumerable Module**
+- **Ruby School Library Classes**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -104,11 +104,6 @@ Thats it now you can execute your program on termonal:)
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Ayesha Arshad**
-
-- GitHub: [@shella12](https://github.com/shella12)
-- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
-- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
 👤 **Moses Wamae**
 
