@@ -1,4 +1,4 @@
-require './nameable.rb'
+require './nameable'
 class Person < Nameable
   attr_accessor :name, :age, :parent_permission
   attr_reader :id
@@ -10,9 +10,9 @@ class Person < Nameable
     @parent_permission = parent_permission
   end
 
-   def correct_name
-    self.name    
-   end
+  def correct_name
+    name
+  end
 
   def can_use_services?
     is_of_age? || @parent_permission
@@ -27,5 +27,5 @@ class Person < Nameable
   # rubocop:enable Naming/PredicateName
 end
 
-pers = Person.new(age:10)
+pers = Person.new(age: 10)
 pers.correct_name
