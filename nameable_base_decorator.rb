@@ -1,4 +1,4 @@
-require './person.rb'
+require './person'
 class NameableDecorator < Nameable
   attr_accessor :nameable_obj
 
@@ -11,12 +11,3 @@ class NameableDecorator < Nameable
     @nameable_obj&.correct_name
   end
 end
-
-
-pers = Person.new(name:"hey", age:10)
-
-newpers = NameableDecorator.new(pers)
-
-newpers.correct_name
-
-
