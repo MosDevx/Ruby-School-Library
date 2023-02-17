@@ -104,7 +104,6 @@ Thats it now you can execute your program on termonal:)
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 **Moses Wamae**
 
 - GitHub: [@mosdevx](https://github.com/mosdevx)
@@ -139,6 +138,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
