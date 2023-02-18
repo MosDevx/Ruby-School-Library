@@ -99,10 +99,11 @@ class App
 
   def display_rental_for_id(rental_id)
     filtered_rentals = all_rentals.select { |rental| rental_id == rental.person.id }
-		if filtered_rentals.length == 0
-			puts "Id Not Found. Try again"
-		else filtered_rentals.each { |rental| puts "Date #{rental.date} '#{rental.book.title}' by #{rental.book.author} " }
-		end
+    if filtered_rentals.empty?
+      puts 'Id Not Found. Try again'
+    else
+      filtered_rentals.each { |rental| puts "Date #{rental.date} '#{rental.book.title}' by #{rental.book.author} " }
+    end
   end
 
   def generate_student_id()
@@ -117,14 +118,3 @@ class App
     # rubocop:enable Style/ClassVars
   end
 end
-
-# app = App.new
-# # classroom = Classroom.new('Default Class')
-# app.create_book(title: 'MyBook', author: 'My_Author')
-
-# app.create_student(age: 10, name: 'wamae')
-# app.create_teacher(age: 10, name: 'wae', specialization: 'teach')
-# app.create_teacher(age: 10, name: 'wae', specialization: 'teach')
-# app.display_all_teachers
-# app.display_all_persons
-# app.display_all_books
