@@ -69,33 +69,11 @@ class App
     end
   end
 
-  # def display_all_sudents
-  #   all_students.each { |student| puts "Name: #{student.name}   Age:#{student.age}   ID:#{student.id}  " }
-  # end
 
-  # def display_all_teachers
-  #   all_teachers.each do |teacher|
-  #     puts "Name: #{teacher.name} Specialization: #{teacher.specialization} ID:#{teacher.id}"
-  #   end
-  # end
 
   
 	def display_all_persons
-    # if all_persons.empty?
-    #   all_persons.concat(all_students)
-    #   all_persons.concat(all_teachers)
-    #   if all_persons.empty?
-    #     puts 'No Persons in School System'
-    #   else
-    #     all_persons.each_with_index do |person, index|
-    #       puts "#{index}). Name:#{person.name}  ID:#{person&.id}"
-    #     end
-    #   end
-    # else
-    #   all_persons.each_with_index do |person, index|
-    #     puts "#{index}). Name:#{person.name}  ID:#{person&.id}"
-    #   end
-    # end
+
 		all_persons.each_with_index do |person, index|
 			if person.respond_to?("specialization")
 				role = "Teacher" 
