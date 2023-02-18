@@ -1,10 +1,10 @@
 require './person'
-require './classroom.rb'
+require './classroom'
 
 class Student < Person
   attr_accessor :classroom
 
-  def initialize(age:, classroom:, name:'Unknown', parent_permission:true)
+  def initialize(age:, classroom:, name: 'Unknown', parent_permission: true)
     super(age: age, name: name, parent_permission: parent_permission)
     @classroom = classroom
     classroom.students.push(self) unless classroom.students.include?(self)
@@ -14,5 +14,3 @@ class Student < Person
     '¯(ツ)/¯'
   end
 end
-
-
