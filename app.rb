@@ -69,19 +69,15 @@ class App
     end
   end
 
-
-
-  
-	def display_all_persons
-
-		all_persons.each_with_index do |person, index|
-			if person.respond_to?("specialization")
-				role = "Teacher" 
-			else
-				role = "Student"
-			end
-    puts "#{index}). Role:#{role} Name:#{person.name}  ID:#{person&.id}"
-		end
+  def display_all_persons
+    all_persons.each_with_index do |person, index|
+      role = if person.respond_to?('specialization')
+               'Teacher'
+             else
+               'Student'
+             end
+      puts "#{index}). Role:#{role} Name:#{person.name}  ID:#{person&.id}"
+    end
   end
 
   def display_rental_for_id(rental_id)
