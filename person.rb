@@ -19,7 +19,7 @@ class Person < Nameable
   end
 
   def can_use_services?
-    is_of_age? || @parent_permission
+    of_age? || @parent_permission
   end
 
   def add_rental(rental)
@@ -28,9 +28,7 @@ class Person < Nameable
 
   private
 
-  # rubocop:disable Naming/PredicateName
-  def is_of_age?
+  def of_age?
     @age >= 18
   end
-  # rubocop:enable Naming/PredicateName
 end
