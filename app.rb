@@ -31,7 +31,7 @@ class App
     new_teacher = Teacher.new(age: age, specialization: specialization, name: name,
                               parent_permission: parent_permission, id: generate_teacher_id)
 
-    all_teachers.push(new_teacher)
+    all_persons.push(new_teacher)
 
     'New Teacher Created'
   end
@@ -39,7 +39,7 @@ class App
   def create_student(age:, name:)
     new_student = Student.new(age: age, name: name, id: generate_student_id)
 
-    all_students.push(new_student)
+    all_persons.push(new_student)
     'New Student Created'
   end
 
@@ -69,32 +69,41 @@ class App
     end
   end
 
-  def display_all_sudents
-    all_students.each { |student| puts "Name: #{student.name}   Age:#{student.age}   ID:#{student.id}  " }
-  end
+  # def display_all_sudents
+  #   all_students.each { |student| puts "Name: #{student.name}   Age:#{student.age}   ID:#{student.id}  " }
+  # end
 
-  def display_all_teachers
-    all_teachers.each do |teacher|
-      puts "Name: #{teacher.name} Specialization: #{teacher.specialization} ID:#{teacher.id}"
-    end
-  end
+  # def display_all_teachers
+  #   all_teachers.each do |teacher|
+  #     puts "Name: #{teacher.name} Specialization: #{teacher.specialization} ID:#{teacher.id}"
+  #   end
+  # end
 
-  def display_all_persons
-    if all_persons.empty?
-      all_persons.concat(all_students)
-      all_persons.concat(all_teachers)
-      if all_persons.empty?
-        puts 'No Persons in School System'
-      else
-        all_persons.each_with_index do |person, index|
-          puts "#{index}). Name:#{person.name}  ID:#{person&.id}"
-        end
-      end
-    else
-      all_persons.each_with_index do |person, index|
-        puts "#{index}). Name:#{person.name}  ID:#{person&.id}"
-      end
-    end
+  
+	def display_all_persons
+    # if all_persons.empty?
+    #   all_persons.concat(all_students)
+    #   all_persons.concat(all_teachers)
+    #   if all_persons.empty?
+    #     puts 'No Persons in School System'
+    #   else
+    #     all_persons.each_with_index do |person, index|
+    #       puts "#{index}). Name:#{person.name}  ID:#{person&.id}"
+    #     end
+    #   end
+    # else
+    #   all_persons.each_with_index do |person, index|
+    #     puts "#{index}). Name:#{person.name}  ID:#{person&.id}"
+    #   end
+    # end
+		all_persons.each_with_index do |person, index|
+			if person.respond_to?("specialization")
+				role = "Teacher" 
+			else
+				role = "Student"
+			end
+    puts "#{index}). Role:#{role} Name:#{person.name}  ID:#{person&.id}"
+		end
   end
 
   def display_rental_for_id(rental_id)

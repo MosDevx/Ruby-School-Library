@@ -36,7 +36,7 @@ class Main
         specialization = gets.chomp
         @app.create_teacher(name: name, age: age, specialization: specialization)
         puts
-        puts 'Teacher'
+        puts 'Teacher Created!!'
         break
 
       elsif person_choice.zero?
