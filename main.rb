@@ -128,7 +128,7 @@ class Main
 
       if choice == 7
         puts 'Goodbye'
-        break
+        
 
       elsif choice.between?(0, 7)
         run = 0
